@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="490" prefWidth="830.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Game">
+    <children>
+        <ImageView fitHeight="125.0" fitWidth="194.0" layoutX="323.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../image/question1.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="658.0" layoutY="26.0" onMouseClicked="#refresh" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../image/refresh1.jpg" />
+            </image>
+        </ImageView>
+        <Pane layoutY="260.0" prefHeight="40.0" prefWidth="5.0" style="-fx-background-color: #66FFFF;" />
+        <Label fx:id="Question" alignment="CENTER" contentDisplay="CENTER" layoutX="0" layoutY="162.0" prefHeight="30.0" prefWidth="795.0" text="Con chó trong tiếng anh là gì?">
+            <font>
+                <Font size="15.0" />
+            </font></Label>
+        <VBox layoutX="259.0" layoutY="218.0" prefHeight="250.0" prefWidth="278.0">
+            <children>
+                <Button fx:id="Button1" mnemonicParsing="false" onMouseClicked="#Button1Pressed" prefHeight="50.0" prefWidth="287.0" styleClass="menuItem" stylesheets="@style.css" text="A: Dog">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <VBox.margin>
+                        <Insets top="3.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="Button2" layoutX="50.0" mnemonicParsing="false" onMouseClicked="#Button2Pressed" prefHeight="50.0" prefWidth="278.0" styleClass="menuItem" stylesheets="@style.css" text="B: Cat">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <VBox.margin>
+                        <Insets top="3.0" />
+                    </VBox.margin></Button>
+                <Button fx:id="Button3" mnemonicParsing="false" onMouseClicked="#Button3Pressed" prefHeight="50.0" prefWidth="288.0" styleClass="menuItem" stylesheets="@style.css" text="C: Fish">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <VBox.margin>
+                        <Insets top="3.0" />
+                    </VBox.margin></Button>
+                <Button fx:id="Button4" mnemonicParsing="false" onMouseClicked="#Button4Pressed" prefHeight="50.0" prefWidth="295.0" styleClass="menuItem" stylesheets="@style.css" text="D: Pig">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <VBox.margin>
+                        <Insets top="3.0" />
+                    </VBox.margin></Button>
+                <TextArea fx:id="consoleLog" layoutX="259.0" layoutY="468.0" prefHeight="50.0" prefWidth="278.0" promptText="Đáp án">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </TextArea>
+            </children>
+        </VBox>
+    </children>
+</Pane>
