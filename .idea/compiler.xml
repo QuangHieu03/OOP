@@ -9,8 +9,5 @@
         <module name="dictionary" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="dictionary" target="16" />
-    </bytecodeTargetLevel>
   </component>
 </project>

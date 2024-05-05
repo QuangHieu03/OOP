@@ -13,7 +13,7 @@ public class DictionaryManagement {
 
     public static void insertFromFile() {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("src\\main\\java\\com\\example\\dictionary\\engToVieCleaned.txt"));// Infile
+            BufferedReader reader = new BufferedReader(new FileReader("src\\main\\java\\com\\example\\dictionary\\engToVieCleanned.txt"));// Infile
             String line = reader.readLine();
             while (line != null) {
                 int indexOfTab = line.indexOf("/");
