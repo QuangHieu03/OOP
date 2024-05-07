@@ -45,13 +45,8 @@ public class Offline {
 
     public void offlineSearch(MouseEvent event) throws Exception {
         String translateTxt = inputWord.getText().trim();
-        if (translateTxt != null && translateTxt.length() >0) {
-            if(DictionaryCommandline.searchWord(translateTxt)) {
-                String res = DictionaryManagement.dictionaryLookup(translateTxt);
-                resultTxt.setText(res);
-            }
-        }
-
+        String res = DictionaryManagement.dictionaryLookup(translateTxt);
+        resultTxt.setText(res);
     }
 
     public void voice(MouseEvent event) throws Exception {

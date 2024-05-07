@@ -29,9 +29,11 @@ public class DictionaryManagement {
     }
 
     public static String dictionaryLookup(String word_) {
-        for (int i = 0; i < Dictionary.words.size(); i++) {
-            if (word_.toLowerCase().equals(Dictionary.words.get(i).getWordTarget().toLowerCase())) {
-                return Dictionary.words.get(i).getWordExplain();
+        if (word_ != null && word_.length() >0) {
+            for (int i = 0; i < Dictionary.words.size(); i++) {
+                if (word_.toLowerCase().equals(Dictionary.words.get(i).getWordTarget().toLowerCase())) {
+                    return Dictionary.words.get(i).getWordExplain();
+                }
             }
         }
         return "Can't find your word!";
@@ -87,25 +89,6 @@ public class DictionaryManagement {
         return res;
     }
 
-    //https://stackoverflow.com/questions/53008424/how-to-fix-error-cannot-be-cast-to-com-sun-speech-freetts-voicedirectory
-    public static void wordSpell(String word) {
-        System.setProperty("freetts.voices", "com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory");
-        Voice voice = VoiceManager.getInstance().getVoice("kevin16");
-        if (voice != null) {
-            voice.allocate();// Allocating Voice
-            try {
-                voice.setRate(150);// Setting the rate of the voice
-                voice.setPitch(150);// Setting the Pitch of the voice
-                voice.setVolume(3);// Setting the volume of the voice
-                voice.speak(word);// Calling speak() method
-            } catch (Exception e1) {
-                e1.printStackTrace();
-            }
-        } else {
-            throw new IllegalStateException("Cannot find voice: kevin16");
-        }
-    }
-
 
     public static String getOnline(String langFrom, String langTo, String text) throws IOException {
         // INSERT YOU URL HERE
@@ -125,11 +108,5 @@ public class DictionaryManagement {
         in.close();
         return response.toString();
     }
-    public static String getTranslate(String s) {
-        int index = s.lastIndexOf("translation");
-        int index2 = s.indexOf("\"",index);
-        int index3 = s.lastIndexOf("\"");
-        String res = s.substring(index2+4,index3);
-        return res;
-    }
+
 }

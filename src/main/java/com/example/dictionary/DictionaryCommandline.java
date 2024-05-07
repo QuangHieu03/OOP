@@ -14,21 +14,16 @@ public class DictionaryCommandline {
 
     public static List<Word> listOfWords = Dictionary.words;
 
-    public static void showAllWords() {
-        System.out.format("%-8s %-32s %-40s\n", "No", "|Vietnamese", "|English");
-        for (int i = 0; i < listOfWords.size(); i++) {
-            listOfWords.get(i).getWordInfo(i);
-        }
-    }
-
 
     public static boolean searchWord(String word) {
-        for (int i=0;i<listOfWords.size();i++) {
-            if (word.toLowerCase().equals(listOfWords.get(i).getWordTarget().toLowerCase())) {
-                return true;
+        if (word != null && word.length() >0) {
+            for (int i=0;i<listOfWords.size();i++) {
+                if (word.toLowerCase().equals(listOfWords.get(i).getWordTarget().toLowerCase())) {
+                    return true;
+                }
             }
         }
-        return false;
+            return false;
     }
 
     public static List dictionarySearcher(String word) {
