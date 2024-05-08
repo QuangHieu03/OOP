@@ -57,17 +57,6 @@ public class Offline {
             }
         }
     }
-    public void voice2(MouseEvent event) throws Exception {
-        String temp = resultTxt.getText().trim();
-        if (temp.length() > 0 && temp != null) {
-            if (modeTrans.equals("en-vi")) {
-                VoiceAPI.getVoiceVie(temp);
-                VoiceAPI.play("vie_voice.wav");
-            } else {
-                VoiceAPI.getVoiceVie(temp);
-                VoiceAPI.play("eng_voice.wav");
-            }
-        }
-    }
+
 
 }
